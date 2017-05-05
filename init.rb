@@ -518,7 +518,8 @@ class WktimeHook < Redmine::Hook::ViewListener
 	end
 	
 	def view_layouts_base_html_head(context={})	
-		javascript_include_tag('wkstatus', :plugin => 'redmine_wktime') + "\n" +
+# FIXME: commenting this out removes the "loading" message and spinner when editing tasks
+#		javascript_include_tag('wkstatus', :plugin => 'redmine_wktime') + "\n" +
 		stylesheet_link_tag('lockwarning', :plugin => 'redmine_wktime')		
 	end
 	
